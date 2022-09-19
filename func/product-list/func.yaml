@@ -1,0 +1,22 @@
+specVersion: 0.25.0
+name: product-list
+namespace: ""
+runtime: node
+registry: ""
+image: docker.io/pmbanugo/product-list:latest
+imageDigest: ""
+build: local
+git: {}
+buildpacks: []
+volumes: []
+buildEnvs: []
+envs: []
+annotations: {}
+options: {}
+labels: []
+healthEndpoints:
+  liveness: /health/liveness
+  readiness: /health/liveness
+created: 2022-08-10T15:11:34.672258+02:00
+invocation:
+  format: http

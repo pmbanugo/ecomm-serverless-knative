@@ -1,0 +1,26 @@
+{
+  "extends": "nx/presets/core.json",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "npmScope": "ecomm-serverless-knative",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "deploy-ci",
+          "deploy"
+        ]
+      }
+    }
+  }
+}

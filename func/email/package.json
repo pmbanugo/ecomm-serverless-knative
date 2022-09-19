@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro -l tcp://0.0.0.0:8080",
+    "dev": "micro-dev",
+    "deploy": "func deploy"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "micro": "9.3.4"
+  },
+  "devDependencies": {
+    "micro-dev": "3.1.0"
+  }
+}
