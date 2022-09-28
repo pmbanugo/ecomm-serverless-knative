@@ -114,6 +114,7 @@ export default function Checkout() {
                       className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                       onChange={handleInputChange}
                     >
+                      <option>Select</option>
                       <option value="US">United States</option>
                       <option value="CA">Canada</option>
                       <option value="DE">Germany</option>
