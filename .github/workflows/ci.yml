@@ -1,0 +1,37 @@
+# name: CI
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0
+#       - uses: nrwl/nx-set-shas@v2
+#       - name: Write kubeconfig
+#         run: |
+#           mkdir $HOME/.kube
+#           echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > $HOME/.kube/config
+#       - name: Login to Docker Hub
+#         uses: docker/login-action@v2
+#         with:
+#           username: pmbanugo
+#           password: ${{ secrets.DOCKERHUB_TOKEN }}
+#       - name: Set up node
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#       - name: Install npm dependencies
+#         run: npm ci
+#       - name: Install kn func
+#         run: |
+#           brew tap knative-sandbox/kn-plugins
+#           brew install kn
+#           brew install func
+#       - name: Deploy
+#         run: npx nx affected --target=deploy --parallel=3
