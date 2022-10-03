@@ -1,6 +1,7 @@
 {
   "version": "0.1.0",
   "description": "",
+  "name": "product-detail",
   "main": "index.js",
   "scripts": {
     "start": "micro -l tcp://0.0.0.0:8080",
