@@ -9,7 +9,6 @@
   "private": true,
   "devDependencies": {
     "@nrwl/cli": "14.1.5",
-    "@nrwl/nx-cloud": "^14.6.1",
     "@nrwl/workspace": "14.1.5",
     "nx": "14.1.5",
     "prettier": "^2.5.1",
